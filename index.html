@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> index</title>
+</head>
+<body>
+    <h1>
+        Api
+    </h1>
+
+    <div style="background:red ; width: 200px;height: 200px; color: white;" id="container" >
+
+
+    </div>
+
+    <button style="background: black; color: white; width: 200px; height: 50px;" id="boton" value="click" onclick="obtener()">
+
+        <h2>
+            click
+        </h2>
+
+    </button>
+
+    <script>
+       let contenido = document.getElementById("container").innerText="Hola Mundo api";
+
+      fetch('https://jsonplaceholder.typicode.com/todos/1')
+     .then(response => response.json())
+     .then(json =>{ 
+        console.log(json)
+     
+    
+     })
+       
+     function obtener(){
+      console.log("mostar")}
+     
+  
+   function datos(){
+      fetch("datos.json")
+      .then(data => datos.json())
+      .then( data =>{
+          console.log(data)
+      })
+    
+        
+   
+   
+
+//    let button = document.getElementById("boton");
+         
+//         function mostrar() {
+//             document.getElementById("api");
+//             boton.onclick= mostrar;
+//             console.log("mostar");
+//         }
+        // boton.onclick=mostrar;
+        //  console.log("mostrar");
+
+    </script>
+    
+    </body>
+
+</html>
